@@ -109,3 +109,47 @@
     margin: 1rem auto;
     color: var(--color-brand);
 }
+
+@media screen and (max-width: var(--size-medium)) {
+    #content .info-box {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    #content .grid {
+        width: 95%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 2rem 0 0 6.5rem;
+    }
+
+    #content .grid table {
+        width: 83vw;
+    }
+
+    #content .grid thead tr th:last-child{
+        display: none;
+    }
+
+    #content .grid tbody tr td:last-child{
+        display: none;
+    }
+}
+
+@media screen and (max-width: var(--size-small)) {
+    #content {
+        margin-top: 8rem;
+        padding: 0 1rem;
+    }
+
+    #content .grid {
+        position: relative;
+        margin: 3rem 0 0 0;
+        width: 100%;
+    }
+
+    #content .grid table {
+        width: 100%;
+        margin: 0;
+    }
+}
