@@ -38,13 +38,13 @@
     border-radius: var(--border-radius);
 }
 
-#right-section .nav .profile{
+#right-section .nav .profile {
     display: flex;
     text-align: right;
     margin-right: 0.5em;
 }
 
-#right-section .user-profile{
+#right-section .user-profile {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -57,18 +57,18 @@
     transition: var(--transition);
 }
 
-#right-section .user-profile:hover{
+#right-section .user-profile:hover {
     box-shadow: var(--box-shadow-hover);
 }
 
-#right-section .user-profile img{
+#right-section .user-profile img {
     width: 11rem;
     height: auto;
     margin-bottom: 0.8rem;
     border-radius: 50%;
 }
 
-#right-section .user-profile h2{
+#right-section .user-profile h2 {
     margin-bottom: 0.2rem;
 }
 
@@ -76,7 +76,7 @@
     margin-top: 2rem;
 }
 
-#right-section .reminders .header{
+#right-section .reminders .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -90,7 +90,7 @@
     border-radius: 50%;
 }
 
-#right-section .reminders .notification{
+#right-section .reminders .notification {
     background-color: var(--color-contrast);
     display: flex;
     align-items: center;
@@ -103,11 +103,11 @@
     transition: var(--transition);
 }
 
-#right-section .reminders .notification:hover{
+#right-section .reminders .notification:hover {
     box-shadow: var(--box-shadow-hover);
 }
 
-#right-section .reminders .notification .content{
+#right-section .reminders .notification .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -123,7 +123,7 @@
     display: flex;
 }
 
-#right-section .reminders .add-reminder{
+#right-section .reminders .add-reminder {
     background-color: var(--color-contrast);
     border: 2px dashed var(--color-brand);
     color: var(--color-brand);
@@ -133,13 +133,57 @@
     cursor: pointer;
 }
 
-#right-section .reminders .add-reminder:hover{
+#right-section .reminders .add-reminder:hover {
     background-color: var(--color-brand);
     color: white;
 }
 
-#right-section .reminders .add-reminder div{
+#right-section .reminders .add-reminder div {
     display: flex;
     align-items: center;
     gap: 0.6rem;
+}
+
+@media screen and (max-width: 768px) {
+    #right-section {
+        width: 94%;
+        margin: 0 auto 4rem;
+    }
+
+    #right-section .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        background-color: var(--color-contrast);
+        padding: 0 var(--padding);
+        height: 4.6rem;
+        width: 100%;
+        z-index: 2;
+        box-shadow: 0 1rem 1rem var(--color-transparent);
+        margin: 0;
+    }
+
+    #right-section .nav .dark-mode {
+        width: 4.4rem;
+        position: absolute;
+        left: 58%;
+    }
+
+    #right-section .profile .info {
+        display: none;
+    }
+
+    #right-section .nav button {
+        display: inline-block;
+        background-color: transparent;
+        cursor: pointer;
+        color: var(--color-dark);
+        position: absolute;
+        left: 1rem;
+    }
+
+    #right-section .nav button span {
+        font-size: 2rem;
+    }
 }

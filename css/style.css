@@ -1,121 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;500;800&display=swap');
+
+@import "config.css";
 @import "sidebar.css";
 @import "content.css";
 @import "right-section.css";
-
-:root{
-  --color-background: #f6f6f6;
-  --color-brand: #a76ccf;
-  --color-dark: #363949;
-  --color-dark-medium: #7d8da1;
-  --color-dark-light: #677483;
-  --color-danger: #ec0970;
-  --color-success: #1b899c;
-  --color-warning: #f7ea60;
-  --color-contrast: #fff;
-  --color-transparent: rgba(132, 139, 200, 0.18);
-
-  --border-radius: 0.5rem;
-  --border-radius-more: 1.0rem;
-  --border-radius-card: 0.8rem;
-  --border-radius-fix: 15px;
-
-  --padding-card: 1.8rem;
-  --padding: 1.2rem;
-
-  --box-shadow: 0 0.5rem 1rem var(--color-transparent);
-  --transition: all 0.2s ease;
-
-  --size-medium: 1200px;
-  --size-small:  768px;
-}
-
-.dark-mode-vars {
-  --color-background: #181a1e;
-  --color-contrast: #202528;
-  --color-dark: #edeffd;
-  --color-dark-light: #a3bdcc;
-  --color-transparent: rgba(0, 0, 0, 0.4);
-  --box-shadow: 0 2rem 3rem var(--color-transparent);
-  --box-shadow-hover: 0 0rem 5rem var(--color-transparent);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  appearance: none;
-  border: 0;
-  text-decoration: none;
-  box-sizing: border-box;
-}
-
-body {
-  width: 100vw;
-  height: 100vh;
-  font-family: 'JetBrains Mono', sans-serif;
-  font-size: 0.88rem;
-  overflow-x: hidden;
-  color: var(--color-dark);
-  background-color: var(--color-background);
-}
-
-a {
-  color: var(--color-dark);
-}
-
-img {
-  display: block;
-  width: 100%;
-  object-fit: cover;
-}
-
-h1 {
-  font-weight: 800;
-  font-size: 1.6rem;
-}
-
-h2 {
-  font-weight: 500;
-  font-size: 1.5rem;
-}
-
-h3 {
-  font-weight: 300;
-  font-size: 0.8rem;
-}
-
-small {
-  font-size: 0.6rem;
-}
-
-.brand {
-  color: var(--color-brand) !important;
-}
-
-.danger {
-  color: var(--color-danger) !important;
-}
-
-.success {
-  color: var(--color-success) !important;
-}
-
-.warning {
-  color: var(--color-warning) !important;
-}
-
-.text-left {
-  text-align: left !important;
-}
-
-.text-center {
-  text-align: center !important;
-}
-
-.text-right {
-  text-align: right !important;
-}
 
 .container {
   display: grid;
@@ -125,14 +13,14 @@ small {
   grid-template-columns: 10rem auto 20rem;
 }
 
-@media screen and (max-width: var(--size-medium)) {
+@media screen and (max-width: 1200px) {
   .container {
     width: 95%;
     grid-template-columns: 5rem auto 20rem;
   }
 }
 
-@media screen and (max-width: var(--size-small)) {
+@media screen and (max-width: 768px) {
   .container {
     width: 100%;
     grid-template-columns: 1fr;
