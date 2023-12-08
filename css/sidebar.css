@@ -1,0 +1,149 @@
+#sidebar {
+    height: 100vh;
+    user-select: none;
+    display: block;
+}
+
+#sidebar .logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 1.4rem;
+}
+
+#sidebar .logo {
+    display: flex;
+    gap: 0.5rem;
+}
+#close-btn {
+    padding-right: 1rem;
+    display: none;
+}
+
+#sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-contrast);
+    box-shadow: var(--box-shadow);
+    border-radius: 15px;
+    height: 88vh;
+    position: relative;
+    top: 1.5rem;
+    padding-top: 0.9rem;
+    transition: var(--transition);
+}
+
+#sidebar-menu:hover {
+    box-shadow: var(--box-shadow-hover);
+}
+
+#sidebar-menu a {
+    display: flex;
+    align-items: center;
+    color: var(--color-dark-medium);
+    height: 3.5rem;
+    gap: 0.5rem;
+    position: relative;
+    margin-left: 1.4rem;
+    transition: var(--transition);
+}
+
+#sidebar-menu a span {
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+#sidebar-menu a:last-child {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+
+#sidebar-menu a.active {
+    width: 95%;
+    color: var(--color-brand);
+    background-color: var(--color-transparent);
+    border-top-right-radius: var(--border-radius-more);
+    border-bottom-right-radius: var(--border-radius-more);
+    margin-left: 0;
+}
+
+#sidebar-menu a.active span {
+    color: var(--color-brand);
+    margin-left: calc(1rem - 3px);
+}
+
+#sidebar-menu a:hover {
+    color: var(--color-brand);
+}
+
+#sidebar-menu a:hover span {
+    margin-left: 0.6rem;
+}
+
+#sidebar-menu .message-count
+{
+    background-color: var(--color-danger);
+    padding: 4px;
+    color: var(--color-contrast) !important;
+    font-size: 0.5rem;
+    border-radius: var(--border-radius-more);
+}
+
+@media screen and (max-width: var(--size-medium)) {
+    #sidebar .logo h2 {
+        display: none;
+    }
+
+    #sidebar-menu em {
+        display: none;
+    }
+
+    #sidebar-menu a {
+        width: 5.6rem;
+    }
+
+    #sidebar-menu a:last-child {
+        position: relative;
+        margin-top: 1.8rem;
+    }
+}
+
+@media screen and (max-width: var(--size-small)) {
+
+    #sidebar {
+        position: fixed;
+        background-color: var(--color-contrast);
+        width: 15rem;
+        z-index: 3;
+        box-shadow: none;
+        display: none;
+        height: auto;
+    }
+
+    #sidebar .logo {
+        margin-left: 1rem;
+    }
+
+    #sidebar .logo h2 {
+        display: inline;
+    }
+
+    #sidebar-menu em {
+        display: inline;
+    }
+
+    #sidebar-menu {
+        height: auto;
+    }
+
+    #sidebar-menu a {
+        width: 100%;
+        height: 3rem;
+    }
+
+    #close-btn {
+        display: inline-block;
+        cursor: pointer;
+    }
+}

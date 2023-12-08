@@ -1,0 +1,111 @@
+#content {
+    margin-top: 1.5rem;
+}
+
+#content .info-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+}
+
+#content .info-box > div {
+    background-color: var(--color-contrast);
+    padding: var(--padding-card);
+    border-radius: var(--border-radius-card);
+    margin-top: 1.2rem;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+#content .info-box > div:hover {
+    box-shadow: var(--box-shadow-hover);
+}
+
+#content .info-box > div .status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#content .info-box h3 {
+    margin-left: 0.6rem;
+    font-size: 1rem;
+}
+
+#content .info-box .progress {
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+}
+
+#content .info-box svg circle {
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+}
+
+#content .info-box .info-success svg circle {
+    stroke: var(--color-success);
+}
+
+#content .info-box .info-warning svg circle {
+    stroke: var(--color-danger);
+}
+
+#content .info-box .info-stats svg circle {
+    stroke: var(--color-brand);
+}
+
+#content .info-box .progress .percentage {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+#content .grid {
+    margin-top: 2rem;
+}
+
+#content .grid h2 {
+    margin-bottom: 0.8rem;
+}
+
+#content .grid table {
+    background-color: var(--color-contrast);
+    width: 100%;
+    padding: var(--padding-card);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius-card);
+    transition: var(--transition);
+    word-break: break-word;
+}
+
+#content .grid table:hover {
+    box-shadow: var(--box-shadow-hover);
+}
+
+#content table tbody td {
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-transparent);
+    color: var(--color-dark-light);
+}
+
+#content table tbody tr:last-child td {
+    border: none;
+}
+
+#content .grid a {
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: var(--color-brand);
+}
